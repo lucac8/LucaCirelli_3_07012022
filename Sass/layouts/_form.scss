@@ -1,0 +1,22 @@
+
+#search
+{
+    background-color: darken($color: $color-back, $amount: 5%);
+    box-shadow: inset 0 5px 5px -5px rgb(134, 133, 133);
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 15px;
+}
+#ville_search
+{
+    border: none;
+    background-color: darken($color: $color-back, $amount: 5%);
+    font-size: 1rem;
+    text-align: center;
+    width: 130px;
+    &:focus
+    {
+        outline: none;
+    }
+}

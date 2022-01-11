@@ -1,0 +1,36 @@
+.fonctionnement ol{counter-reset: num;
+
+    li{
+        padding: 25px;
+        background-color: $color-back;
+        list-style: none;
+        counter-increment: num;
+        margin-bottom: 25px;
+        border-radius: 25px;
+        font-weight: 700;
+        @include shadow;
+        transition: all 300ms;
+        
+        i{
+            color: gray;
+            margin-right: 20px;
+        }
+        &::before{
+            content: counter(num);
+            color: white;
+            background-color: $color-primary;
+            border-radius: 50%;
+            padding: 5px 9px;
+            margin-right: 25px;
+            margin-left: -35px;
+            font-size: small;
+        }
+        &:hover
+        {
+            background-color: lighten($color-primary, 30);
+            i{
+                color: $color-primary;
+            }
+        }
+    }
+}

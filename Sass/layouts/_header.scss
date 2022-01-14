@@ -19,7 +19,7 @@ nav
         width: 80%;
     }
     p{
-        width: 80%;
+        width: 90%;
     }
 }
 
@@ -35,7 +35,9 @@ nav
     justify-content: center;
     position: relative;
     z-index: 1;
-    @include shadow;
+    text-decoration: none;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2) ;  /*   LA */
+
     &:hover{
         &::after{
             opacity: 1;            
@@ -53,6 +55,7 @@ nav
         opacity: 0;
         z-index: -1;
         border-radius: 25px;
+        box-shadow: 0 5px 20px rgba(0, 0, 0, 0.8) ;  /* LA*/
         transition: opacity 300ms;
     }
 }

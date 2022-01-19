@@ -63,9 +63,8 @@ nav p {
   position: relative;
   z-index: 1;
   text-decoration: none;
-  -webkit-box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
-          box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
-  /*   LA */
+  -webkit-box-shadow: 0px 3px 12px 5px #dbdbdb;
+          box-shadow: 0px 3px 12px 5px #dbdbdb;
 }
 
 .btn:hover::after {
@@ -77,18 +76,17 @@ nav p {
   position: absolute;
   top: 0;
   right: 0;
-  bottom: 0;
   left: 0;
+  bottom: 0;
   background: -webkit-gradient(linear, right bottom, left top, from(#a16be0), to(#ff93e1));
   background: linear-gradient(to left top, #a16be0, #ff93e1);
   opacity: 0;
   z-index: -1;
   border-radius: 25px;
-  -webkit-box-shadow: 0 5px 20px rgba(0, 0, 0, 0.8);
-          box-shadow: 0 5px 20px rgba(0, 0, 0, 0.8);
-  /* LA*/
   -webkit-transition: opacity 300ms;
   transition: opacity 300ms;
+  -webkit-box-shadow: 0px 3px 12px 5px #5c5c5c;
+          box-shadow: 0px 3px 12px 5px #5c5c5c;
 }
 
 #search {
@@ -131,8 +129,8 @@ nav p {
   border-radius: 25px;
   font-weight: 700;
   width: 90%;
-  -webkit-box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
-          box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+  -webkit-box-shadow: 0px 3px 12px 5px #dbdbdb;
+          box-shadow: 0px 3px 12px 5px #dbdbdb;
   -webkit-transition: all 300ms;
   transition: all 300ms;
 }
@@ -155,6 +153,8 @@ nav p {
 
 .fonctionnement ol li:hover {
   background-color: #e4d5f6;
+  -webkit-box-shadow: 0px 3px 12px 5px #5c5c5c;
+          box-shadow: 0px 3px 12px 5px #5c5c5c;
 }
 
 .fonctionnement ol li:hover i {
@@ -166,9 +166,14 @@ nav p {
   color: black;
 }
 
+/* SECTION RESTAURANT */
 .restaurant {
   background-color: #f6f6f6;
   padding: 50px 0 80px 0;
+}
+
+.restaurant h2 {
+  margin-left: 5%;
 }
 
 .align {
@@ -238,6 +243,12 @@ nav p {
   bottom: 25px;
   font-size: 30px;
   z-index: 1;
+  -webkit-transition: all 1000ms;
+  transition: all 1000ms;
+}
+
+.card_restaurant i:hover {
+  color: transparent;
 }
 
 .card_restaurant i:hover::after {
@@ -250,10 +261,7 @@ nav p {
   font-family: "Font Awesome 5 Free";
   font-weight: 900;
   font-size: 30px;
-  top: 0;
   right: 0;
-  bottom: 0;
-  left: 0;
   opacity: 0;
   z-index: -1;
   background: -webkit-gradient(linear, left top, left bottom, from(#9356DC), to(#FF79DA));
@@ -321,6 +329,7 @@ footer a {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  top: 0;
 }
 
 .loading__spinner {

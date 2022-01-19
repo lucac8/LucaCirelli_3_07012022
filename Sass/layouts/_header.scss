@@ -25,18 +25,8 @@ nav
 
 .btn
 {
-    height: 50px;
-    width: 225px;
-    border-radius: 25px;
-    background: linear-gradient(to left top,$color-primary,$color-secondary);
-    color: white;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: relative;
-    z-index: 1;
-    text-decoration: none;
-    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2) ;  /*   LA */
+    @include button ;
+    @include shadow;
 
     &:hover{
         &::after{
@@ -45,18 +35,8 @@ nav
 
     }
     &::after {
-        content: "";
-        position: absolute;
-        top: 0;
-        right: 0;
-        bottom: 0;
-        left: 0;
-        background: linear-gradient(to left top,lighten($color-primary,5),lighten($color-secondary,5));
-        opacity: 0;
-        z-index: -1;
-        border-radius: 25px;
-        box-shadow: 0 5px 20px rgba(0, 0, 0, 0.8) ;  /* LA*/
-        transition: opacity 300ms;
+        @include buttonafter;
+        @include shadow(50);
     }
 }
 

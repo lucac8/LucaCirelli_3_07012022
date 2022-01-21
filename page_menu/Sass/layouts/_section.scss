@@ -1,0 +1,176 @@
+section{
+    position: relative;
+    z-index: 1;
+    margin-top: -40px;
+    background-color: $color-back;
+    width: 100%;
+    border-radius: 30px;
+    padding: 20px;
+    .titre{
+        display: flex;
+        justify-content: space-between;
+        h2{
+            margin-top: 0;
+            font-family: 'Shrikhand' , cursive;
+        }
+        i{
+            font-size: 30px;
+            z-index: 1;
+            transition: all 1000ms;
+            &:hover{
+                color: transparent;
+                &::after{
+                    opacity: 1;            
+                }
+            }
+            &::after {
+                content: "\f004";
+                position: relative;
+                font-family: "Font Awesome 5 Free";
+                font-weight: 900;
+                font-size: 30px;
+                right: 30px;
+                opacity: 0;
+                z-index: -1;
+                background: linear-gradient(to bottom,$color-primary,$color-secondary);
+                transform-origin: bottom;
+                background-clip: text;
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+                transition: opacity 1000ms;
+            }
+        }
+    }
+}
+
+article h3{
+    font-weight: 400;
+    position: relative;
+    display: inline-block;
+    padding-bottom: 5px;
+    &::before
+    {
+        content: "";
+        position: absolute;
+        border-bottom: 3px solid $color-tertiary;
+        width: 50%;
+        bottom: 0;
+        left: 0;
+    }
+}
+
+$anim-dur: 1s;
+$anim-delay: $anim-dur / 9;
+
+@keyframes start{
+    0%{
+        opacity: 0;
+        transform: translatey(20px);
+    }
+    100%{
+        opacity: 1;
+        transform: translatey(0px);
+        visibility: visible;
+    }
+}
+
+.card-plat{
+    background-color: white;
+    border-radius: 15px;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+    visibility: hidden;
+    animation: start $anim-dur forwards ;
+        @for $i from 1 through 9 {
+            &--#{$i} {
+                animation-delay: $anim-delay * $i;
+            }
+        }
+    &__txt{
+        padding: 10px 0 10px 10px;
+        overflow: hidden;
+        white-space: nowrap;
+        h4 , p {
+            margin:0;
+            text-overflow: ellipsis;
+            overflow: hidden;
+        }
+        p{
+            font-size: 0.9rem;
+        }
+    }
+    &__prix{
+        display: flex;
+        align-items: flex-end;
+        padding: 10px 10px 10px 10px;
+        font-weight: bold;
+        font-size: 0.9rem;
+    }
+    &__right{
+        display: flex;
+    }
+
+    &:hover{
+        .card-plat__anim{
+            width: 50px;
+            transform: scaleX(1);
+            .check{
+                transform: rotate(360deg);
+            }
+        }
+    }
+    &__anim{
+        width: 0;
+        background-color: $color-tertiary;
+        border-radius: 0 15px 15px 0;
+        transform: scaleX(0);
+        transform-origin: right;
+        transition: transform 500ms;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        .check{
+            color: white;
+            transition: transform 500ms;
+            font-size: 1.3rem;
+        }
+        
+    }
+}
+
+.button{
+    margin: 35px 0;
+    display: flex;
+    justify-content: center;
+}
+
+.btn
+{
+    @include button(170px);
+    @include shadow;
+    text-align: center;
+
+    &:hover{
+        &::after{
+            opacity: 1;            
+        }
+
+    }
+    &::after {
+        @include buttonafter;
+        @include shadow(50);
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .align_pc{
+        display: flex;
+    }
+    article{
+        margin: 0 25px;
+        flex: 1;
+        overflow: hidden;
+        white-space: nowrap;
+    }
+}

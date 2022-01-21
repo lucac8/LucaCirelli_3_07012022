@@ -1,0 +1,30 @@
+header
+{
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    a{
+        position: absolute;
+        left: 3%;
+        font-size: larger;
+        color: black;
+    }
+}
+
+main{
+    img{
+        height: 250px;
+        width: 100%;
+        object-fit: cover;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    main{
+        img{
+            height: 400px;
+        }
+    }
+}

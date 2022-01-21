@@ -1,0 +1,45 @@
+footer
+{
+    background-color: darken($color-back, 80);
+    color: white;
+    padding-left: 30px;
+    h4{
+        font-family: 'Shrikhand' , cursive ;
+        padding-top: 25px;
+        margin-top: 0px;
+    }
+    ul{
+        list-style-type: none;
+        padding-left: 0;
+        padding-bottom: 25px;
+        margin-bottom: 0;
+    }
+    li{
+        padding-bottom: 5px;
+    }
+    i{
+        margin-right: 5px;
+    }
+    a{
+        text-decoration: none;
+        color: white;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    footer{
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: center;
+        padding: 0;
+        h4{
+            padding: 0;
+        }
+        ul{
+            display: flex;
+            li{
+                margin: 15px;
+            }
+        }
+    }
+}

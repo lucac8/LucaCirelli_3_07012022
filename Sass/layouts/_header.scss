@@ -1,10 +1,9 @@
 header
 {
     text-align: center;
-}
-h1
-{
+    h1{
     margin: 5px;
+    }
 }
 
 nav
@@ -36,7 +35,7 @@ nav
     }
     &::after {
         @include buttonafter;
-        @include shadow(50);
+        @include shadow(30);
     }
 }
 

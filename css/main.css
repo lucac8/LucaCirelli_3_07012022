@@ -16,7 +16,7 @@ header {
   text-align: center;
 }
 
-h1 {
+header h1 {
   margin: 5px;
 }
 
@@ -85,8 +85,8 @@ nav p {
   border-radius: 25px;
   -webkit-transition: opacity 300ms;
   transition: opacity 300ms;
-  -webkit-box-shadow: 0px 3px 12px 5px #5c5c5c;
-          box-shadow: 0px 3px 12px 5px #5c5c5c;
+  -webkit-box-shadow: 0px 3px 12px 5px #8f8f8f;
+          box-shadow: 0px 3px 12px 5px #8f8f8f;
 }
 
 #search {
@@ -118,6 +118,7 @@ nav p {
 
 .fonctionnement ol {
   counter-reset: num;
+  padding-left: 5%;
 }
 
 .fonctionnement ol li {
@@ -128,7 +129,7 @@ nav p {
   margin-bottom: 25px;
   border-radius: 25px;
   font-weight: 700;
-  width: 90%;
+  width: 95%;
   -webkit-box-shadow: 0px 3px 12px 5px #dbdbdb;
           box-shadow: 0px 3px 12px 5px #dbdbdb;
   -webkit-transition: all 300ms;
@@ -147,14 +148,14 @@ nav p {
   border-radius: 50%;
   padding: 5px 9px;
   margin-right: 25px;
-  margin-left: -35px;
+  margin-left: -28px;
   font-size: small;
 }
 
 .fonctionnement ol li:hover {
   background-color: #e4d5f6;
-  -webkit-box-shadow: 0px 3px 12px 5px #5c5c5c;
-          box-shadow: 0px 3px 12px 5px #5c5c5c;
+  -webkit-box-shadow: 0px 3px 12px 5px #8f8f8f;
+          box-shadow: 0px 3px 12px 5px #8f8f8f;
 }
 
 .fonctionnement ol li:hover i {
@@ -164,6 +165,30 @@ nav p {
 .fonctionnement a {
   text-decoration: none;
   color: black;
+}
+
+.fonctionnement h2 {
+  margin-left: 5%;
+}
+
+@media screen and (min-width: 1040px) {
+  .fonctionnement ol {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    padding-left: 0;
+  }
+  .fonctionnement ol li {
+    width: 26%;
+  }
+  .fonctionnement {
+    padding: 25px 0;
+  }
+  .fonctionnement h2 {
+    margin-left: 3%;
+  }
 }
 
 /* SECTION RESTAURANT */
@@ -275,9 +300,31 @@ nav p {
   transition: opacity 1000ms;
 }
 
-section h2 {
-  margin-left: 20px;
-  text-align: left;
+@media screen and (min-width: 820px) {
+  .align {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+  }
+  .card_restaurant {
+    width: 45%;
+    height: 350px;
+    margin-bottom: 25px;
+  }
+  .card_restaurant img {
+    height: 270px;
+  }
+  .restaurant h2 {
+    margin-left: 3%;
+  }
 }
 
 footer {
@@ -296,6 +343,7 @@ footer ul {
   list-style-type: none;
   padding-left: 0;
   padding-bottom: 25px;
+  margin-bottom: 0;
 }
 
 footer li {
@@ -309,6 +357,33 @@ footer i {
 footer a {
   text-decoration: none;
   color: white;
+}
+
+@media screen and (min-width: 768px) {
+  footer {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    padding: 0;
+  }
+  footer h4 {
+    padding: 0;
+  }
+  footer ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  footer ul li {
+    margin: 15px;
+  }
 }
 
 .loading {
